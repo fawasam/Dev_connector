@@ -1,0 +1,6 @@
+{
+    "mongoURI":"mongodb+srv://fawasam:fawas@mern.lscun.mongodb.net/dev_connector?retryWrites=true&w=majority",
+    "jwtSecret":"fawasam",
+    "githubClientId":"e507c32e96d06d53a849",
+    "githubSecret":"30d9c41fb3bbb11a7adb3d72d054690b8a1890e3"
+}
