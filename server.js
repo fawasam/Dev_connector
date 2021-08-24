@@ -10,14 +10,7 @@ const authRoute =require("./routes/api/auth")
 const postsRoute =require("./routes/api/posts")
 const profileRoute =require("./routes/api/profile")
 
-//serve static assets in production
-if(process.env.NODE_ENV === 'production'){
-    //set static folder
-    app.use(express.stattic('client/build'))
-    app.get('*' ,(req,res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build' ,'index.html'))
-    })
-}
+
 
 //connect db
 connectDB()
@@ -33,7 +26,14 @@ app.use("/api/auth" ,authRoute)
 app.use("/api/posts" ,postsRoute) 
 app.use("/api/profile" ,profileRoute) 
 
-
+//serve static assets in production
+if(process.env.NODE_ENV === 'production'){
+    //set static folder
+    app.use(express.stattic('client/build'))
+    app.get('*' ,(req,res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build' ,'index.html'))
+    })
+}
 
 
 //connection
