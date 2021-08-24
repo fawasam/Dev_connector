@@ -1,7 +1,7 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Spinner from '../layout/Spinner'
-import { getGithubRepos, getProfileById} from '../../actions/profileAction'
+import { getProfileById} from '../../actions/profileAction'
 import { Link } from 'react-router-dom'
 import ProfileTop from './ProfileTop'
 import ProfileAbout from './ProfileAbout'
@@ -19,7 +19,7 @@ const Profile = ({
     useEffect(()=>{
     getProfileById(match.params.id)
 
-    },[match.params.id ,getGithubRepos])
+    },[match.params.id ,getProfileById])
 
     return (
         <>

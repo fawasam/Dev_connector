@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const ProfileTop = ({
     profile:{
         status,company,location,website,social,
@@ -19,34 +19,34 @@ const ProfileTop = ({
           <p>{location}</p>
           <div className="icons my-1">
             {website && (
-                <a href={website} target="_blank" rel="noopener noreferrer">
+                <Link to={website} target="_blank" rel="noopener noreferrer">
                 <i className="fas fa-globe fa-2x"></i>
-                 </a>
+                 </Link>
             )}
             {social && social.twitter && (
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <Link to={"/"} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter fa-2x"></i>
-            </a>
+            </Link>
             )}
            { social && social.facebook && (
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <Link to={"/"} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook fa-2x"></i>
-            </a>
+            </Link>
            )}
            {social && social.linkedin &&(
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <Link to={"/"} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin fa-2x"></i>
-            </a>
+            </Link>
            )}
            {social && social.youtube &&(
-             <a href="#" target="_blank" rel="noopener noreferrer">
+             <Link to={"/"} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-youtube fa-2x"></i>
-            </a>
+            </Link>
            )}
            {social && social.instagram &&(
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <Link to={"/"} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram fa-2x"></i>
-            </a>
+            </Link>
            )}
           </div>  
     </div>        

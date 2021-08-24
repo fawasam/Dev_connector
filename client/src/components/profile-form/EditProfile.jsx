@@ -58,7 +58,7 @@ const EditProfile = ({
     instagram: loading || !profile.social ? '' : profile.social.instagram
 
     })  
-    },[])
+    },[setFormData])
 
     const onChange =e => setFormData({...formData ,[e.target.name]:e.target.value})
     const onSubmit =e=>{
